@@ -9,8 +9,8 @@ router = SimpleRouter()
 router.register('books', BookViewSet, basename='books')
 
 urlpatterns = [
-    # path('books-list-create/', BookListCreateAPIView.as_view()),
-    # path('books-retrieve-update-destroy/<int:pk>/', BookRetrieveUpdateDestroyAPIView.as_view()),
+    path('books-list-create/', BookListCreateAPIView.as_view()),
+    path('books-retrieve-update-destroy/<int:pk>/', BookRetrieveUpdateDestroyAPIView.as_view()),
 ]
 
 urlpatterns += router.urls
